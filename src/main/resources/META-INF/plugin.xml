@@ -9,9 +9,17 @@
     <resource-bundle>messages.MyBundle</resource-bundle>
 
     <extensions defaultExtensionNs="com.intellij">
-        <toolWindow factoryClass="com.github.minsecrus.cide.toolWindow.MyToolWindowFactory" id="MyToolWindow"/>
+        <toolWindow factoryClass="com.github.minsecrus.cide.toolWindow.MyToolWindowFactory"
+                    id="MyToolWindow"/>
     </extensions>
-
+    <extensions defaultExtensionNs="com.intellij">
+        <fileType
+                name="C File"
+                implementationClass="com.github.minsecrus.cide.language.CFileType"
+                fieldName="INSTANCE"
+                language="C"
+                extensions="c"/>
+    </extensions>
     <applicationListeners>
         <listener class="com.github.minsecrus.cide.listeners.MyApplicationActivationListener" topic="com.intellij.openapi.application.ApplicationActivationListener"/>
     </applicationListeners>
