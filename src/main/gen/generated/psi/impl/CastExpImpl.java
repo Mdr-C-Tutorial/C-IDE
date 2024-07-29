@@ -1,0 +1,48 @@
+// This is a generated file. Not intended for manual editing.
+package generated.psi.impl;
+
+import java.util.List;
+import org.jetbrains.annotations.*;
+import com.intellij.lang.ASTNode;
+import com.intellij.psi.PsiElement;
+import com.intellij.psi.PsiElementVisitor;
+import com.intellij.psi.util.PsiTreeUtil;
+import static generated.GeneratedTypes.*;
+import com.intellij.extapi.psi.ASTWrapperPsiElement;
+import generated.psi.*;
+
+public class CastExpImpl extends ASTWrapperPsiElement implements CastExp {
+
+  public CastExpImpl(@NotNull ASTNode node) {
+    super(node);
+  }
+
+  public void accept(@NotNull Visitor visitor) {
+    visitor.visitCastExp(this);
+  }
+
+  @Override
+  public void accept(@NotNull PsiElementVisitor visitor) {
+    if (visitor instanceof Visitor) accept((Visitor)visitor);
+    else super.accept(visitor);
+  }
+
+  @Override
+  @Nullable
+  public CastExp getCastExp() {
+    return findChildByClass(CastExp.class);
+  }
+
+  @Override
+  @Nullable
+  public TypeName getTypeName() {
+    return findChildByClass(TypeName.class);
+  }
+
+  @Override
+  @Nullable
+  public UnaryExp getUnaryExp() {
+    return findChildByClass(UnaryExp.class);
+  }
+
+}
